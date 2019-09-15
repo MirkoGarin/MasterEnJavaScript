@@ -1,3 +1,11 @@
-$(document).ready(function () {
-    alert("eventos Cargado");
+$(document).ready(function(){
+    
+    $("#mostrar").click(function(){
+       $("#caja").show(); 
+        })
+               
+    $("#ocultar").click(function(){
+       $("#caja").hide(); 
+            })
+    
 });
