@@ -11,6 +11,7 @@ $("#ocultar").click(function(){
     $("#mostrar").show();
     $("#caja").fadeTo('slow', 0.2); 
     })
+    
 $("#todoenuno").click(function(){
     $("#caja").slideToggle('Fast');
 })
