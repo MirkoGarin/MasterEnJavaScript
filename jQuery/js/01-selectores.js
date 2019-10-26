@@ -1,51 +1,47 @@
-$(document).ready(function () {
-    //    console.log("Estamos listos!!");
+$(document).ready(function(){
 
-    //Selector de ID
-    $("#rojo").css("background", "red")
-        .css("color", "white");
+	// Selector de ID
+	$("#rojo").css("background","red")
+			  .css("color", "white");
 
-    $("#amarillo").css("background", "yellow")
-        .css("color", "green")
-        .css("font-family", "verdana");
+	$("#amarillo").css("background","yellow")
+				  .css("color","green");
 
-    $("#verde").css("background", "green")
-        .css("color", "white");
+	$("#verde").css("background","green")
+				  .css("color","white");
 
-    //console.log(rojo);
-    //console.log(amarillo);
-    //zsconsole.log(verde);
 
-    //Selector de CLASES
-    var miclass = $('.zebra').css("padding", "1px");
+	// Selectores de clases
+	var mi_clase = $('.zebra').css("padding","5px");
 
-    $('.sinborde').click(function () {
-        console.log("Click dado!!!");
-        $(this).addClass('zebra');
+	$('.sin_borde').click(function(){
+		console.log("Click dado!!");
+		$(this).addClass('zebra');
+	});
 
-    });
 
-    //console.log(miclass.eq(1));
+	// Selectores de etiqueta
+	var parrafos = $('p').css("cursor", "pointer");
 
-    //Selector de etiquetas
+	parrafos.click(function(){
+		var that = $(this);
 
-    var parrafos = $('p').css("cursor", "pointer");
+		if(!that.hasClass('grande')){
+			that.addClass('grande');
+		}else{
+			that.removeClass('grande');
+		}
+	});
 
-    parrafos.click(function () {
-        var that = $(this);
-        if (!that.hasClass('grande')) {
+	// Selectores de atributo
+	$('[title="Google"]').css('background', '#ccc');
+	$('[title="Facebook"]').css('background', 'blue');
 
-            that.addClass('grande');
+	// Otros
+	//$('p, a').addClass('margen-superior');
 
-        } else {
+	var busqueda = $("#elemento2").parent().parent().find('.resaltado');
 
-            that.removeClass('grande');
-        }
-    });
-
-    // Selectores de atrigutos
-
-    $('[title = "google"]').css('background', '#ccc');
-    $('[title = "facebook"]').css('background', 'blue');
+	console.log(busqueda);
 
 });
