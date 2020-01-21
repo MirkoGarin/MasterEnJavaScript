@@ -5,17 +5,28 @@
     <meta charset="utf-8">
     <title>Proyecto Completo JS</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css"><link />
-    <link id= "theme" rel="stylesheet" type="text/css" href="css/green.css"><link />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
+    <link />
 
     <!-- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <!-- Pluggin validation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+   
+    <!-- Mis Script -->
+    <script type="text/javascript" src="./js/main.js"></script>
     <style>
     </style>
 </head>
@@ -43,17 +54,29 @@
             </nav>
         </header>
         <!-- SLIDER -->
-        <div id="slider">
-                <div class="bxslider">
-                        <div><img src="./img/hojas.jpg" title="Hojas"></div>
-                        <div><img src="./img/rojo.jpg" title="Rojo"></div>
-                        <div><img src="./img/cielo.jpg" title="Cielo"></div>
-                      </div>
-        </div>
         <!-- CONTENIDO -->
         <section id="content">
-            <div id="posts">
-           <!-- POst desde un jason -->
+            <div id="box">
+                <!-- Cargar formulario de contacto-->
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form_contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+                    <label for="surname">Apellido</label>
+                    <input type="text" name="surname" data-validation="alphanumeric"/>
+                    <label>Mail</label>
+                    <input type="email" name="email" data-validation="email"  />
+                    <label for="sex">Sexo</label>
+                    <select for="sex" data-validation="required">
+                        <option value="men">Hombre</option>
+                        <option value="Women">Mujer</option>   
+                    </select>    
+                    <label for="date">Nacimiento</label>
+                    <input type="text" name="date" data-validation="birthdate" data-validation-format="dd/mm/yyyy" />
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number"/>
+                    <input type="submit" value="enviar">
+                </form>
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -67,10 +90,10 @@
                     <form for="name">
                         <label for="name">Nombre</label>
                         <input type="text" name="name" id="form_name" />
-                        <label for="email">e-mail</label>
-                        <input type="email" name="email" id="form_mail"/>
+                        <label>Mail</label>
+                        <input type="email" name="email" id="form_email" />
                         <label for="password">Contrasena</label>
-                        <input type="password" name="password" id="form_pass"/>
+                        <input type="password" name="password" id="form_pass" />
                         <input type="submit" value="Entrar" />
                     </form>
                 </div>
