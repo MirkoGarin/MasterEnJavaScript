@@ -12,9 +12,10 @@ var peliculas = [
 	{titulo: "La verdad duele", year: 2016, pais: "Francia"},
 	pelicula
 ];
-
+$data = file_get_contents("data/products.json");
 var caja_peliculas = document.querySelector("#peliculas");
 var index;
+
 for(index in peliculas){
 	var p = document.createElement("p");
 	p.append(peliculas[index].titulo + " - " + peliculas[index].year);
